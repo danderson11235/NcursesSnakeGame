@@ -53,13 +53,15 @@ void Game::run()
     case PLAY://play---------------------------------------------------------
         std::this_thread::sleep_for(std::chrono::milliseconds(25));
         setSnakeDirection();
-        if (!snake->moveSnake())
+        if (!snake->moveSnake(width, height))
         {
             curState = END;
             break;
         }
+        //check if apple is eaten and needs to be re drawn
         erase();
         snake->drawSnake();
+        //draw apple
         break;
     case END:
 

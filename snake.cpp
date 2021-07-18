@@ -24,18 +24,34 @@ void Snake::drawSnake()
     }
 }
 
-bool Snake::moveSnake(int, xMax, int yMax)
+bool Snake::moveSnake(int xMax, int yMax, Apple * apple)
+{   
+    // if the new direction is opposite of old dir set new to old and continue
+    if ((curDirection != newDirection) && (curDirection + newDirection % 2) == 1) 
+        {newDirection = curDirection;}
+    // if the direction that the snake wants to move is wall/tail end
+    std::pair<int, int> dirVec = getDirVec(newDirection);
+    // if the position contains an apple then then inc tail at head and move head
+    // retrun true
+
+    // move the tail from the back to the front
+
+}
+
+std::pair<int, int> Snake::getDirVec(Direction dir)
 {
-    if (newDirection == curDirection)
+    switch (dir)
     {
-        switch (curDirection)
-        {
-            case UP:
-
-        }
-    } 
-    else 
-    {
-
+    case UP:
+        return {0, -1};
+    case DOWN:
+        return {0, 1};
+    case LEFT:
+        return {-1, 0};
+    case RIGHT:
+        return {1, 0};
+    default:
+        break;
     }
+    return {0, 0};
 }
