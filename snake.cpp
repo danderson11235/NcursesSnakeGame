@@ -8,7 +8,7 @@ Snake::Snake(int startx, int starty)
         tail.push_back({startx - i, starty});
     }
     curDirection = RIGHT;
-    
+
 }
 
 Snake::~Snake()
@@ -24,7 +24,18 @@ void Snake::drawSnake()
     }
 }
 
-bool Snake::moveSnake()
+bool Snake::moveSnake(int, xMax, int yMax)
 {
-    Direction
+    if (newDirection == curDirection)
+    {
+        switch (curDirection)
+        {
+            case UP:
+
+        }
+    } 
+    else 
+    {
+
+    }
 }

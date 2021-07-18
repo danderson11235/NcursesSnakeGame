@@ -1,3 +1,5 @@
+#pragma once
+
 #include <vector>
 #include <utility>
 #include <ncurses.h>
@@ -15,6 +17,6 @@ public:
     void drawSnake();
     void setDirection(Direction dir);
     Direction getDirection();
-    bool moveSnake();
+    bool moveSnake(int xMax, int yMax);
 };
 
