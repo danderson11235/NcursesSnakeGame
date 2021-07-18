@@ -8,7 +8,7 @@ class Snake
 private:
     std::vector<std::pair<int, int>> tail;
     std::pair<int, int> head;
-    Direction direction;
+    Direction newDirection, curDirection;
 public:
     Snake(int startx, int starty);
     ~Snake();

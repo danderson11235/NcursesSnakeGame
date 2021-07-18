@@ -7,6 +7,7 @@ Snake::Snake(int startx, int starty)
     {
         tail.push_back({startx - i, starty});
     }
+    curDirection = RIGHT;
     
 }
 
@@ -21,4 +22,9 @@ void Snake::drawSnake()
     {
         mvaddch(scale.second, scale.first, '#');
     }
+}
+
+bool Snake::moveSnake()
+{
+    Direction
 }

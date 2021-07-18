@@ -112,4 +112,5 @@ void Game::setSnakeDirection()
     {
         keyPresses.pop();
     }
+    mtx.unlock();
 }
