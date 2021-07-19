@@ -53,7 +53,7 @@ void Game::run()
     case PLAY://play---------------------------------------------------------
         std::this_thread::sleep_for(std::chrono::milliseconds(25));
         setSnakeDirection();
-        if (!snake->moveSnake(width, height))
+        if (!snake->moveSnake(width, height, apple))
         {
             curState = END;
             break;

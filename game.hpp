@@ -15,6 +15,7 @@ private:
     int key;
     std::queue<int> keyPresses;
     std::mutex mtx;
+    Apple* apple;
 public:
     Game();
     ~Game();
