@@ -1,7 +1,7 @@
 #include <ncurses.h>
 #include "game.hpp"
 
-void main ()
+int main ()
 {
     initscr();
     cbreak();
@@ -15,5 +15,6 @@ void main ()
     }
     
 
-    endwin();    
+    endwin();  
+    return 1;  
 }

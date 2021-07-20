@@ -8,7 +8,7 @@ class Game
 {
 private:
     int score;
-    typedef enum State {BOOT, START, PLAY, END, QUIT};
+    typedef enum State {BOOT, START, PLAY, END, QUIT} State;
     State curState;
     Snake* snake;
     int height, width;

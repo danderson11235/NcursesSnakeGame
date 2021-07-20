@@ -6,7 +6,7 @@
 
 #include "apple.hpp"
 
-typedef enum Direction {UP, LEFT, DOWN, RIGHT};
+typedef enum Direction {UP, LEFT, DOWN, RIGHT} Direction;
 class Snake
 {
 private:

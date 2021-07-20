@@ -71,3 +71,8 @@ std::pair<int, int> Snake::getDirVec(Direction dir)
     }
     return {0, 0};
 }
+
+void Snake::setDirection(Direction dir)
+{
+    newDirection = dir;
+}
